@@ -11,22 +11,31 @@ DBS_NAME = os.getenv('MONGO_DB_NAME', 'achievements')
 COLLECTION_NAME = 'diagnostix'
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 @app.route('/stats')
-def achievement_stats():
+def stats():
+    return render_template('stats.html')
+
+
+@app.route('/stats/details')
+def get_stats():
     FIELDS = {
-        '_id': False, 'progressState': True, 'titleAssociations': True, 'progression': True, 'rarity': True, 
-        'platforms': True, 'isSecret': True, 'rewards': True
+        '_id': False, 'progressState': True, 'titleAssociations': True, 'progression': True, 
+        'rarity': True, 'platforms': True, 'isSecret': True, 'rewards': True
     }
 
     with MongoClient(MONGO_URI) as conn:
         collection = conn[DBS_NAME][COLLECTION_NAME]
         achievement_data = collection.find(projection=FIELDS)
         return json.dumps(list(achievement_data))
-
 
 if __name__ == '__main__':
     app.run(debug=True)
