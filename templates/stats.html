@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+    <div id="test-bar-chart"></div>
+
+    <script src="{{ url_for ('static', filename='lib/js/crossfilter.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/d3.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/dc.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/queue.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/keen.min.js')}}"></script>
+    <script src="{{ url_for ('static', filename='js/graph.js')}}"></script>
+    <script src="{{ url_for ('static', filename='lib/js/intro.js')}}"></script>
+{% endblock %}
