@@ -1,4 +1,18 @@
 {% extends "index.html" %}
 {% block content %}
-   <div id="first-bar-chart"></div>
+<section class="container">
+    <div class="row-absolute">
+        <div class="col-lg-offset-2 col-lg-8">
+            <img id="home-logo" src="../static/img/Xbox_Logo.png" alt="Xbox One Logo">  
+        </div>
+    </div>
+    <div class="row-absolute" id="welcome-row">
+        <div class="col-lg-offset-2 col-lg-8">
+            <h1 id="welcome">Show me the Achievements!</h1>
+        </div>
+        <div class="col-lg-offset-3 col-lg-6">
+            <a href="{{ url_for('stats') }}"><img id="welcome-link" src="../static/img/achievement.png" alt="Achievement"></a>
+        </div>
+    </div>
+</section>
 {% endblock %}
