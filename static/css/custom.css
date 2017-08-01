@@ -24,6 +24,7 @@
 .navbar-default .navbar-nav > li > a {
     color: white;
     font-family: Helvetica, Arial, sans-serif;
+    padding-left: 4vw;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     color: white;
@@ -47,6 +48,7 @@ body {
     margin-top: 70px;
     background: darkgreen;
     font-family: Helvetica, Arial, sans-serif;
+    color: white;
 }
 
 /* Home Style */
@@ -57,7 +59,7 @@ body {
     right: 0;
 }
 #welcome-row {
-    transform: translateY(30%)
+    transform: translateY(30%);
 }
 #welcome {
     font-size: 10vw;
@@ -132,4 +134,26 @@ body {
     0%   { opacity: 0;   }
     50%  { opacity: 0;   }
     100% { opacity: 1;   }
+}
+
+/* About Style*/
+.about-img {
+    width: 100%;
+    padding-top: 70px;
+}
+figure > img {
+    width: 100%;
+}
+.row {
+    padding-bottom: 10px;
+}
+.about-more {
+    padding-top: 40px;
+}
+.inline-link {
+    color: white;
+    text-decoration: underline;
+}
+.inline-link:hover {
+    color: grey;
 }

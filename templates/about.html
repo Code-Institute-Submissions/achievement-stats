@@ -1,4 +1,103 @@
 {% extends "index.html" %}
 {% block content %}
-   
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="text-center">Who am I and what does this site do?</h2>
+                <p class="text-justify">
+                    Hi, I'm DiagnostiX! I have been playing video games for as long as I can remember. I had the original Xbox and loved it, which led me 
+                    to buy the Xbox 360 and Xbox One on their release dates. When Microsoft launched Achievements on the Xbox 360, I started to become addicted 
+                    unlocking as many as I could. To this date I still aim to unlock as many achievements as I possibly can on any game that I purchase. 
+                    This addiction has led to me accruing over 150,000 Gamerscore across multiple years.
+                </p>
+                <p class="text-justify">
+                    I made this site show my achievements in a simplistic, easy to understand way. The charts on the stats page are responsive 
+                    and change depending on what specifc dataset you have selected. I am using data I gathered from the 
+                    <a class="inline-link" href="https://xboxapi.com/">Unofficial Xbox API</a> which I have then transferred to a MongoDB database. I then sort through 
+                    the data using the date of unlock to create charts showing when I unlocked achievements, which months I unlocked the most and 
+                    which years I unlocked the most.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <h2>What are Achievements and Gamerscore?</h2>
+                <p class="text-justify">
+                    The Gamerscore (G) is an achievements point accumulation system that reflects the number of achievements accumulated by a user 
+                    on Xbox Live through the displaying of the amount of points accumulated. These Achievement points are awarded for the completion 
+                    of game-specific challenges, such as beating a level or amassing a specified number of wins against other players in online 
+                    matches and other various in game challenges.
+                </p>
+                <p class="text-justify">
+                    Initially, retail Xbox 360 games offered up to 1,000G spread over a variable number of Achievements, while each Xbox Live Arcade 
+                    title contained 12 Achievements totaling 200G. On February 1, 2007, Microsoft announced on their Gamerscore Blog some new policies 
+                    that developers must follow related to Gamerscore and Achievements in future releases. All regular disc-based games must 
+                    have 1,000 Gamerscore points in the base game; the title can ship with fewer than 1,000 points, but anything added later must be 
+                    free. Game developers also now have the option of adding up to 250 points via downloadable content every quarter after the first 
+                    year of release (for a total of 1,750 points). Xbox Live Arcade titles also allow players to obtain Gamerscore, initially up to 200 
+                    Gamerscore with additional points up to 50 Gamerscore via downloadable content (for a total of 250 points), but some XBLA 
+                    games now contain up to 400 Gamerscore without DLC.
+                </p>
+                <p class="text-justify">
+                    On May 26, 2007, Halo 2 was the first Games for Windows title to feature Achievements, which counted towards a player's Gamerscore.
+                </p>
+                <p class="text-justify">
+                    On March 25, 2008, Microsoft cracked down on "Gamerscore cheaters" (those who used external tools to artificially inflate their 
+                    Gamerscore), and reduced their Gamerscores to zero without the option to recover the scores that had been "earned", and branded 
+                    the player by denoting on their Gamertag that they were a "Cheater".
+                </p>
+                <p class="text-justify">
+                    The development of the Gamerscore system has created a new niche in the internet economy. Many websites have been created 
+                    to provide gamers with tips and tricks for getting achievement points. Some sites are solely devoted to these achievement 
+                    guides, and some blogs provide gaming guides in addition to their other content.
+                </p>
+                <p class="text-justify">
+                    On March 13, 2014, Ray Cox IV or "Stallion83" became the first player in history to reach 1 million Gamerscore.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <figure class="about-img">
+                    <img src="../static/img/list.jpg" alt="Achievement List">
+                    <figcaption class="text-center">A game's achievements shown on Xbox 360</figcaption>
+                </figure>
+                <figure class="about-more hidden-xs">
+                    <img src="../static/img/unlockrare.jpg" alt="Rare Achievement">
+                    <figcaption class="text-center">Introduction of rare achievements</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 hidden-xs">
+                <figure class="about-img">
+                    <img src="../static/img/trophies.jpg" alt="Playstation Trophies">
+                    <figcaption class="text-center">Sony's achievement based system - Playstation Tropies</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-8">
+                <h2>How did the trend start?</h2>
+                <p class="text-justify">
+                    Although many other individual games would develop their own "secret bonuses" and internal achievements, the first implementation of an 
+                    easily accessible and multi-game achievement system is widely considered to be Microsoft's Xbox 360 Gamerscore system, introduced in 2005. 
+                    Microsoft extended Gamerscore support to the Games for Windows - Live scheme in 2007 by including support for Achievements in Halo 2.
+                </p>
+                <p class="text-justify">
+                    In 2007, Valve became the second large publisher to release a platform-based, multi-game achievement system for their Steam platform, 
+                    eventually capturing a wide number of Windows, Mac OS X, Linux, and SteamOS based games.
+                </p>
+                <p class="text-justify">
+                    In 2008, Sony followed suit by offering Trophies for the PlayStation 3. There was no Trophy support for the PlayStation Portable, 
+                    even though the device does have PSN connection capability. By 2011, The successor to the PlayStation Portable, the PlayStation Vita, 
+                    and all PlayStation Vita games had universal support for the Trophy system, as well as the later PlayStation 4 and its games.
+                </p>
+                <p class="text-justify">
+                    Apple added achievements to Game Center on October 12, 2011 with the release of the iOS 5, for mobile platform for iPhone, iPad, and iPod touch.
+                    Achievements are available on Android via Google Play Games.
+                </p>
+                <p class="text-justify">
+                    Microsoft's mobile OSes, Windows Phone 7 and Windows Phone 8, included Xbox Live support, including Achievements when first launched worldwide on October 21, 2010.
+                    Amazon's Kindle provided the GameCircle service starting July 11, 2012, which tracks achievements and leaderboards for some games adapted to the Kindle platform.
+                </p>
+            </div>
+        </div>
+    </section>
 {% endblock %}
