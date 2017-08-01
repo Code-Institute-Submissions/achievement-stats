@@ -8,17 +8,17 @@ It displays Xbox achievement data that is stored in a database in graphs and cha
 The site is built using Flask which handles the page routing and accessing the data from a MongoDB database. The charts are then drawn using D3.js, DC.js and Crossfilter which help to display them and link the data between the charts so they are responsive. Intro.js is used to create the user guide.
 ## Features
 ### Existing Features
-- None yet!
-### Features Left to Implement
 - Front-End
     - Home Page
     - About Page
-    - Data Page
-        - D3.js, DC.js, Crossfilter JavaScript libraries for creating charts
-        - User Guide
 - Back-End
     - MongoDB Database
     - Flask Routing and Database Access
+### Features Left to Implement
+- Front-End
+    - Data Page
+        - D3.js, DC.js, Crossfilter JavaScript libraries for creating charts
+        - User Guide
 ## Tech Used
 ### The Tech Used Includes:
 - [Bootstrap](http://getbootstrap.com/)
@@ -41,4 +41,8 @@ The site is built using Flask which handles the page routing and accessing the d
 ### Sources
 - [XboxAPI](https://xboxapi.com)
     - I have used **XboxAPI** to gather the data I want to display before importing it into MongoDB
+- [Wikipedia](https://www.wikipedia.org)
+    - I have use **Wikipedia** to provide the information and history of achievements on the about page
+- [stack overflow](https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load?answertab=votes#tab-top)
+    - I have used **stack overflow** many times for support with styling and subtle solutions to issues. I used the top reply in the link above to help with the css fade in and out on my home page
 ## Website link coming soon
