@@ -5,19 +5,35 @@ queue()
 function makeGraphs(error, projectsJson) {
 
     //Clean projectsJson data
-    var myProject = projectsJson;  
+    var achievementsProject = projectsJson;  
     var dateFormat = d3.time.format("%Y-%m-%dT%H:%M:%S.%LZ");
     stripNanoseconds = function(s) { return s.slice(0, -5) + "Z"; },
-    myProject.forEach(function (d) {
+    achievementsProject.forEach(function (d) {
         d["progression"]["timeUnlocked"] = dateFormat.parse(stripNanoseconds(d["progression"]["timeUnlocked"]));
+        d["progression"]["timeUnlocked"].setDate(1);
     });
 
     //Create a Crossfilter instance
-    var ndx = crossfilter(myProject);
+    var ndx = crossfilter(achievementsProject);
 
     //Define Dimensions
     var dateDim = ndx.dimension(function (d) {
         return d["progression"]["timeUnlocked"];
+    });
+    var isUnlockedDim = ndx.dimension(function (d) {
+        return d["progressState"];
+    });
+    var gameNameDim = ndx.dimension(function (d) {
+        return d["titleAssociations"]["name"];
+    });
+    var rarityDim = ndx.dimension(function (d) {
+        return d["rarity"]["currentPercentage"];
+    });
+    var isSecretDim = ndx.dimension(function (d) {
+        return d["isSecret"];
+    });
+    var gamerscoreDim = ndx.dimension(function (d) {
+        return d["rewards"]["value"];
     });
 
     //Calculate metrics
