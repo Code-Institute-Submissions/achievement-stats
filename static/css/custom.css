@@ -136,7 +136,7 @@ body {
     100% { opacity: 1;   }
 }
 
-/* About Style*/
+/* About Style */
 .about-img {
     width: 100%;
     padding-top: 70px;
@@ -156,4 +156,14 @@ figure > img {
 }
 .inline-link:hover {
     color: grey;
+}
+
+/* Chart Styles */
+.chart-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding-bottom: 15px;
+}
+#select-game {
+    color: black;
 }

@@ -29,7 +29,7 @@ def stats():
 def get_stats():
     FIELDS = {
         '_id': False, 'progressState': True, 'titleAssociations': True, 'progression': True, 
-        'rarity': True, 'platforms': True, 'isSecret': True, 'rewards': True
+        'rarity': True, 'isSecret': True, 'rewards': True
     }
 
     with MongoClient(MONGO_URI) as conn:
