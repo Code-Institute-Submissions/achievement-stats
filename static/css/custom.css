@@ -167,3 +167,22 @@ figure > img {
 #select-game {
     color: black;
 }
+
+/* Line Chart */
+.axis text {
+    fill: white;
+}
+.x-axis-label, .y-axis-label {
+    fill: white;
+}
+.dc-chart .axis path, .axis line {
+    stroke: white;
+}
+path.line {
+    stroke: yellow;
+}
+
+/* Pie Charts */
+.dc-legend {
+    fill: white;
+}

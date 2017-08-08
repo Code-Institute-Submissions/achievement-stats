@@ -89,14 +89,22 @@ function makeGraphs(error, projectsJson) {
         .radius(120)
         .transitionDuration(1500)
         .dimension(isUnlockedDim)
-        .group(isUnlockedGroup);
+        .group(isUnlockedGroup)
+        .innerRadius(50)
+        .legend(dc.legend().x(118).y(125).gap(5))
+        .renderLabel(false)
+        .colors(d3.scale.ordinal().range(['#FFFF00','#a8ddb5','#43a2ca']));
 
     secretChart
         .height(300)
         .radius(120)
         .transitionDuration(1500)
         .dimension(isSecretDim)
-        .group(isSecretGroup);
+        .group(isSecretGroup)
+        .innerRadius(40)
+        .legend(dc.legend().x(130).y(135).gap(5))
+        .renderLabel(false)
+        .colors(d3.scale.ordinal().range(['#FFFF00','#43a2ca']));
 
     dc.renderAll();
 }
