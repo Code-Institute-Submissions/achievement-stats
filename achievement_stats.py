@@ -38,4 +38,4 @@ def get_stats():
         return json.dumps(list(achievement_data))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
