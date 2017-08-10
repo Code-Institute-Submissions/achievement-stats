@@ -159,6 +159,17 @@ figure > img {
 }
 
 /* Chart Styles */
+#tour-button {
+    border: 2px solid rgba(12, 255, 255, 1);
+    border-radius: 50px;
+    width: 260px;
+}
+.introjs-helperLayer {
+    background-color: rgba(12, 255, 255, 0.6);
+}
+.introjs-tooltip {
+    color: black;
+}
 span {
     font-size: 22px;
 }

@@ -1,43 +1,47 @@
 {% extends "index.html" %}
 {% block content %}
     <div class="container">
+        <div id="tour" class="col-lg-12 text-center">
+            <input id="tour-button" type="image" src="../static/img/tour.png" class="intro_button" onclick="javascript:introJs().start();">
+            </input>
+        </div>
         <div class="row">
             <div id="date-container" class="col-lg-12">
-                <article data-step="1" data-intro="Test" data-position="bottom">
-                    <div id="date-chart"><span>Achievements Unlocked by Date</span></div>
+                <article>
+                    <div data-step="1" data-intro="This chart shows the quantity of achievements that I have unlocked each month. Select a timeframe and the other charts will reflect this choice." data-position="bottom" id="date-chart"><span>Achievements Unlocked by Date</span></div>
                 </article>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-6 col-sm-12 pie-container">
-                <article data-step="2" data-intro="Test" data-position="bottom">
+                <article>
                     <span>Status of Achievements</span>
                     <div class="chart-stage">
-                        <div id="unlocked-chart"></div>
+                        <div data-step="2" data-intro="This pie shows the status of the achievements for all the games I have played. Choose segments and the other charts will reflect this choice." data-position="top" id="unlocked-chart"></div>
                     </div>
                 </article>
             </div>
             <div class="col-lg-6 col-sm-12 pie-container">
-                <article data-step="3" data-intro="Test" data-position="bottom">
+                <article>
                     <span>Secret Achievements</span>
                     <div class="chart-stage">
-                        <div id="secret-chart"></div>
+                        <div data-step="3" data-intro="This pie shows the amount of achievements that are secret. Select a segment and the other charts will reflect this choice." data-position="top" id="secret-chart"></div>
                     </div>
                 </article>
             </div>
         </div>
         <div class="row">
             <div id="select-container" class="col-lg-6 col-md-12">
-                <article data-step="4" data-intro="Test" data-position="bottom">
+                <article>
                     <div class="chart-stage">
-                        <div id="select-game"><span>Select Game: </span></div>
+                        <div data-step="4" data-intro="Here you can select a game from my collection and view data specific to that game." data-position="top" id="select-game"><span>Select Game: </span></div>
                     </div>
                 </article>
             </div>
             <div id="total-container" class="col-lg-6 col-md-12">
-                <article data-step="5" data-intro="Test" data-position="bottom">
+                <article>
                     <div class="chart-stage">
-                        <div id="total-number"><span>Total Achievements: </span></div>
+                        <div data-step="5" data-intro="This shows the total quantity of achievements currently selected and shown in the charts." data-position="top" id="total-number"><span>Total Achievements: </span></div>
                     </div>
                 </article>
             </div>

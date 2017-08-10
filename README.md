@@ -11,14 +11,15 @@ The site is built using Flask which handles the page routing and accessing the d
 - Front-End
     - Home Page
     - About Page
+    - Data Page
+        - D3.js, DC.js, Crossfilter JavaScript libraries for creating charts
+        - User Guide
 - Back-End
     - MongoDB Database
     - Flask Routing and Database Access
 ### Features Left to Implement
-- Front-End
-    - Data Page
-        - D3.js, DC.js, Crossfilter JavaScript libraries for creating charts
-        - User Guide
+- None!
+    
 ## Tech Used
 ### The Tech Used Includes:
 - [Bootstrap](http://getbootstrap.com/)
