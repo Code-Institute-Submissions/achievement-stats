@@ -46,4 +46,5 @@ The site is built using Flask which handles the page routing and accessing the d
     - I have use **Wikipedia** to provide the information and history of achievements on the about page
 - [stack overflow](https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load?answertab=votes#tab-top)
     - I have used **stack overflow** many times for support with styling and subtle solutions to issues. I used the top reply in the link above to help with the css fade in and out on my home page
-## Website link coming soon
+## Please view the website on the link below
+<https://achievement-stats.herokuapp.com>
