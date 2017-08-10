@@ -159,15 +159,34 @@ figure > img {
 }
 
 /* Chart Styles */
-.chart-container {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    padding-bottom: 15px;
+span {
+    font-size: 22px;
 }
+#date-container {
+    height: 470px;
+    border-bottom: 2px solid greenyellow;
+}
+.pie-container {
+    height: 340px;
+    border-bottom: 2px solid greenyellow;
+    padding-top: 10px;
+}
+#select-container {
+    height: 50px;
+}
+#total-container {
+    height: 50px;
+}
+/* Game Select Styles */
 #select-game {
     color: black;
 }
-
+#select-game span {
+    color: white;
+}
+.dc-select-menu {
+    width: 150px;
+}
 /* Line Chart */
 .axis text {
     fill: white;
@@ -181,7 +200,6 @@ figure > img {
 path.line {
     stroke: yellow;
 }
-
 /* Pie Charts */
 .dc-legend {
     fill: white;

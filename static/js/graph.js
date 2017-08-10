@@ -60,6 +60,10 @@ function makeGraphs(error, projectsJson) {
     var selectGame = dc.selectMenu("#select-game");
     var totalNumber = dc.numberDisplay("#total-number");
 
+    //Date Chart Responsiveness
+    var dateContainer = $("#date-container").width();
+    var dateWidth = dateContainer;
+
     totalNumber
         .formatNumber(d3.format("d"))
         .valueAccessor(function (d) {
@@ -71,18 +75,39 @@ function makeGraphs(error, projectsJson) {
         .dimension(gameNameDim)
         .group(gameNameGroup);
 
-    dateChart
-        .width(800)
-        .height(400)
-        .margins({top: 10, right: 40, bottom: 40, left: 40})
-        .dimension(dateDim)
-        .group(dateGroup)
-        .transitionDuration(500)
-        .x(d3.time.scale().domain([minDate, maxDate]))
-        .elasticY(true)
-        .xAxisLabel("Date Unlocked")
-        .yAxisLabel("Quantity")
-        .yAxis().ticks(10);
+    if (dateContainer < 768) {
+        dateChart
+            .width(dateWidth)
+            .height(400)
+            .margins({top: 10, right: 40, bottom: 70, left: 40})
+            .dimension(dateDim)
+            .group(dateGroup)
+            .transitionDuration(500)
+            .x(d3.time.scale().domain([minDate, maxDate]))
+            .elasticY(true)
+            .xAxisLabel("Date Unlocked")
+            .yAxisLabel("Quantity")
+            .on("renderlet", function (chart) {
+                chart.selectAll("g.x text")
+                    .attr('x', '-30')
+                    .attr('y', '-5')
+                    .attr('transform', "rotate(-90)");
+            })
+            .yAxis().ticks(10);
+    } else {
+        dateChart
+            .width(dateWidth)
+            .height(400)
+            .margins({top: 10, right: 40, bottom: 40, left: 40})
+            .dimension(dateDim)
+            .group(dateGroup)
+            .transitionDuration(500)
+            .x(d3.time.scale().domain([minDate, maxDate]))
+            .elasticY(true)
+            .xAxisLabel("Date Unlocked")
+            .yAxisLabel("Quantity")
+            .yAxis().ticks(10);
+    }
 
     unlockedChart
         .height(300)
