@@ -4,10 +4,14 @@ queue()
 
 function makeGraphs(error, projectsJson) {
 
-    //Keeps content responsive upon window resizing
-    window.onresize = function() { 
-        location.reload(); 
-    }
+    //Keeps content responsive upon window width resizing
+    var windowWidth = $(window).width();
+    
+    $(window).resize(function(){
+        if(windowWidth != $(window).width()){
+            location.reload();
+        }
+    });
 
     //Clean projectsJson data
     var achievementsProject = projectsJson;  
