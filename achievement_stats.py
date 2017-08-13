@@ -28,8 +28,7 @@ def stats():
 @app.route('/stats/details')
 def get_stats():
     FIELDS = {
-        '_id': False, 'progressState': True, 'titleAssociations': True, 'progression': True, 
-        'rarity': True, 'isSecret': True, 'rewards': True
+        '_id': False, 'progressState': True, 'titleAssociations': True, 'progression': True, 'isSecret': True, 'rewards': True
     }
 
     with MongoClient(MONGO_URI) as conn:

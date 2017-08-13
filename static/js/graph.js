@@ -4,6 +4,11 @@ queue()
 
 function makeGraphs(error, projectsJson) {
 
+    //Keeps content responsive upon window resizing
+    window.onresize = function() { 
+        location.reload(); 
+    }
+
     //Clean projectsJson data
     var achievementsProject = projectsJson;  
     var dateFormat = d3.time.format("%Y-%m-%d");
@@ -26,25 +31,18 @@ function makeGraphs(error, projectsJson) {
     var gameNameDim = ndx.dimension(function (d) {
         return d.titleAssociations["0"].name;
     });
-    var rarityDim = ndx.dimension(function (d) {
-        return d.rarity.currentCategory;
-    });
     var isSecretDim = ndx.dimension(function (d) {
         return d.isSecret;
     });
     var totalAchievements = ndx.dimension(function (d) {
         return d.progression.requirements["0"].target;
     });
-    //var gamerscoreDim = ndx.dimension(function (d) {
-    //    return d.rewards["0"].value;
-    //});
 
     //Calculate metrics
     var dateGroup = dateDim.group();
     var isUnlockedGroup = isUnlockedDim.group();
     var gameNameGroup = gameNameDim.group();
     var isSecretGroup = isSecretDim.group();
-    var rarityGroup = rarityDim.group();
     var totalGroup = totalAchievements.group();
 
     var all = ndx.groupAll();
@@ -75,7 +73,20 @@ function makeGraphs(error, projectsJson) {
         .dimension(gameNameDim)
         .group(gameNameGroup);
 
-    if (dateContainer < 768) {
+    if (dateContainer >= 768) {
+        dateChart
+            .width(dateWidth)
+            .height(400)
+            .margins({top: 10, right: 40, bottom: 40, left: 40})
+            .dimension(dateDim)
+            .group(dateGroup)
+            .transitionDuration(500)
+            .x(d3.time.scale().domain([minDate, maxDate]))
+            .elasticY(true)
+            .xAxisLabel("Date Unlocked")
+            .yAxisLabel("Quantity")
+            .yAxis().ticks(10);
+    } else {
         dateChart
             .width(dateWidth)
             .height(400)
@@ -93,19 +104,6 @@ function makeGraphs(error, projectsJson) {
                     .attr('y', '-5')
                     .attr('transform', "rotate(-90)");
             })
-            .yAxis().ticks(10);
-    } else {
-        dateChart
-            .width(dateWidth)
-            .height(400)
-            .margins({top: 10, right: 40, bottom: 40, left: 40})
-            .dimension(dateDim)
-            .group(dateGroup)
-            .transitionDuration(500)
-            .x(d3.time.scale().domain([minDate, maxDate]))
-            .elasticY(true)
-            .xAxisLabel("Date Unlocked")
-            .yAxisLabel("Quantity")
             .yAxis().ticks(10);
     }
 
